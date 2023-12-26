@@ -1,0 +1,162 @@
+.calculator {
+    padding: 100px 0 0 0;
+}
+
+.calculator__container {
+    padding: 60px 000;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+
+.calculator__taxes-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.form-title {
+    @extend %h3;
+    color: $text-dark;
+    font-weight: 600;
+}
+.taxes-items {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.custom-radio {
+    padding: 10px 20px 10px 20px;
+    border: 1.5px solid $border-dark;
+    border-radius: 40px;
+    @extend %medium-text;
+    color: $text-dark;
+    cursor: pointer;
+
+    transition: 0.3s ease-in;
+}
+.real-radio:checked + .custom-radio {
+    background-color: $border-dark;
+    border: 1.5px solid $border-dark;
+    color: $text-light;
+}
+
+.real-radio {
+    width: 0;
+    height: 0;
+    position: relative;
+    z-index: -1;
+}
+
+.calculator__range-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.range-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-slider {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.slider-range {
+    height: 20px;
+    width: 280px;
+    border-radius: 10px;
+    overflow: hidden;
+    -webkit-appearance: none;
+    transition: 0.5s ease-in;
+
+    &::-webkit-slider-runnable-track {
+        background-color: $border-grey;
+        height: 20px;
+    }
+
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        border: 2px solid $border-dark;
+        background-color: $border-light;
+        border-radius: 50%;
+
+        box-shadow: -380px 0 0 370px $border-dark;
+    }
+
+    &:disabled {
+        &::-webkit-slider-thumb {
+            border: 1.5px solid $border-grey;
+            box-shadow: -380px 0 0 370px $border-grey;
+        }
+    }
+}
+
+.number-range {
+    width: 60px;
+    height: 30px;
+    border: 1.5px solid $border-dark;
+    border-radius: 40px;
+
+    color: $text-dark;
+    @extend %medium-text;
+    font-weight: 600;
+    text-align: center;
+
+    &:focus {
+        border: 1.5px solid $border-dark;
+        color: $text-dark;
+        box-shadow: none;
+        outline: none;
+    }
+
+    &:active {
+        border: 1.5px solid $border-dark;
+        color: $text-dark;
+        box-shadow: none;
+        outline: none;
+    }
+
+    &:disabled {
+        border: 1.5px solid $border-grey;
+        color: $border-grey;
+    }
+
+    &::-webkit-inner-spin-button,
+    ::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+    }
+}
+
+.calculator__price {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.price__price-warapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.price__price-value {
+    padding: 10px 30px 10px 30px;
+    border: 1.5px solid $border-dark;
+    border-radius: 40px;
+    @extend %h3;
+
+    color: $text-dark;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

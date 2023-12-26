@@ -1,0 +1,24 @@
+.testimonials__cards {
+    display: flex;
+    gap: 20px;
+
+    padding: 60px 0 60px 0;
+}
+.testimonials__card {
+    flex: 3;
+    padding: 20px 40px 20px 40px;
+    background-color: $cards-color-second;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+
+    border-radius: 40px;
+}
+.testimonials__card-title {
+    color: $text-dark;
+    font-weight: 600;
+    @extend %medium-text;
+}
+.testimonials-text {
+    color: $text-dark;
+}

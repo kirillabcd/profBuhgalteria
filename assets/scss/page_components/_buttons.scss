@@ -1,0 +1,85 @@
+.button {
+    padding: 10px 20px 10px 20px;
+    border-radius: 40px;
+
+    background-color: $container-color;
+
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+    transition: 0.3s ease-in;
+
+    .button-text {
+        @extend %clickable-els-text;
+        color: $text-dark;
+
+        transform: translateX(11px);
+
+        transition: 0.3s ease-in;
+    }
+
+    .button-icon {
+        width: 18px;
+        height: 18px;
+        transform: scale(0);
+        background-image: url(../img/arrow-up-right.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        transition: 0.3s ease-in;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: $accent-color;
+
+            > .button-text {
+                color: $text-light;
+                transform: translateX(0px);
+            }
+
+            > .button-icon {
+                transform: scale(1);
+            }
+        }
+    }
+}
+
+.button-accent {
+    background-color: $border-dark;
+    @extend %h3;
+    padding: 15px 40px 15px 40px;
+    border: 1.5px solid $border-dark;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (hover: hover) {
+        &:hover {
+            border: 1.5px solid $accent-color;
+        }
+    }
+
+    @media screen and (max-width: $tablet-width) {
+        font-size: $m-size;
+    }
+}
+.button-empty {
+    border: 1.5px solid $border-dark;
+    @extend %h3;
+    padding: 10px 30px 10px 30px;
+    color: $text-dark;
+
+    @media (hover: hover) {
+        &:hover {
+            border: 1.5px solid $accent-color;
+            color: $text-light;
+        }
+    }
+    @media screen and (max-width: $tablet-width) {
+        font-size: $m-size;
+    }
+}

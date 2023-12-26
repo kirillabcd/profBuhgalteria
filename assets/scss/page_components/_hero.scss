@@ -1,0 +1,161 @@
+.hero {
+    padding: 100px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hero__titles-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.h1-title {
+    @extend %h1;
+    color: $text-dark;
+
+    @media screen and (max-width: $tablet-width) {
+        font-size: $h1-m-size;
+    }
+}
+
+.h3-title {
+    padding: 40px 0 0 0;
+    width: 59%;
+    @extend %h3;
+    color: $text-dark;
+
+    @media screen and (max-width: $tablet-width) {
+        width: 100%;
+    }
+}
+
+.hero__buttons-wrapper {
+    padding: 40px 0 0 0;
+    display: flex;
+    gap: 20px;
+}
+
+.hero__cards-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero__cards-window {
+    padding: 20px 0 0 0;
+    width: 100%;
+    overflow: hidden;
+
+    @media screen and (max-width: $desktop-width) {
+        width: 940px;
+    }
+
+    @media screen and (max-width: 1100px) {
+        width: 620px;
+    }
+}
+
+.hero__cards {
+    display: flex;
+    height: 350px;
+    align-items: flex-end;
+    gap: 20px;
+
+    transition: 0.5s ease-in;
+}
+
+.hero__card {
+    padding: 20px 40px 20px 40px;
+    min-width: 300px;
+    height: 300px;
+    background-color: $cards-color;
+    border-radius: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 20px;
+    transition: 0.3s ease-in;
+    transition-delay: 0.3s;
+
+    @media screen and (max-width: 768px) {
+        min-width: 100%;
+    }
+
+    .hero__card-title {
+        color: $text-dark;
+        @extend %h3;
+        transition: 0.3s ease;
+        max-width: 230px;
+
+        transform: translateY(100%);
+
+        @media screen and (max-width: $tablet-width) {
+            font-weight: 600;
+        }
+    }
+
+    .hero__card-descr-wrapper {
+        height: 270px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .hero__card-descr {
+        transform: scaleY(0);
+        text-align: left;
+
+        color: $text-dark;
+        transition: 0.3s ease;
+
+        @extend %medium-text;
+
+        @media screen and (max-width: $tablet-width) {
+            transform: scaleY(1);
+        }
+    }
+
+    .hero__card-icon {
+        max-width: 100px;
+        max-height: 100px;
+        transition: 0.3s linear;
+        transform: translateX(60%);
+        transition-delay: 0.6s;
+
+        @media screen and (max-width: 768px) {
+            transform: translateX(0);
+        }
+    }
+
+    @media screen and (hover: hover) and (min-width: $tablet-width) {
+        &:hover {
+            transition: 0.3s ease-in;
+            transition-delay: 0s;
+            height: 350px;
+            .hero__card-title {
+                font-weight: 600;
+                transform: translateY(0);
+            }
+
+            .hero__card-descr {
+                transform: scaleY(1);
+
+                transition: 0.3s ease;
+                transition-delay: 0.3s;
+            }
+
+            .hero__card-icon {
+                transform: translate(0);
+                transition: 0.3s ease;
+                transition-delay: 0s;
+
+                max-width: 60px;
+                max-height: 60px;
+            }
+        }
+    }
+}

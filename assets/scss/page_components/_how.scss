@@ -1,0 +1,33 @@
+.how {
+    padding: 100px 0 0 0;
+}
+
+.how__cards {
+    padding: 60px 0 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+
+.how__card {
+    padding: 20px 40px 20px 40px;
+    background-color: $cards-color;
+    border-radius: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.how__card-title {
+    color: $text-dark;
+    @extend %h3;
+    font-weight: 600;
+}
+
+.how__card-descr {
+    color: $text-dark;
+    @extend %medium-text;
+}

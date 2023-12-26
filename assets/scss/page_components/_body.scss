@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: $main-font;
+    color: $text-light;
+    background-color: $body-color;
+
+    &.lock-scroll {
+        overflow-y: hidden;
+    }
+}
+
+.container {
+    width: clamp(320px, 100vw, 1440px);
+    padding: 0 40px 0 40px;
+}
+
+.main {
+    background-color: $container-color;
+    border-radius: 40px;
+    padding: 0 40px 0 40px;
+}
