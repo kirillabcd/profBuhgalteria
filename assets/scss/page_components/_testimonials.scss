@@ -1,11 +1,13 @@
 .testimonials__cards {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 
     padding: 60px 0 60px 0;
 }
 .testimonials__card {
     flex: 3;
+    min-width: 250px;
     padding: 20px 40px 20px 40px;
     background-color: $cards-color-second;
     display: flex;
@@ -13,11 +15,34 @@
     flex-direction: column;
 
     border-radius: 40px;
+
+    transition: 0.3s ease-in;
+
+    @media (hover: hover) {
+        &:hover {
+            transform: scale(1.03);
+            .testimonials__card-title .testimonials__card-icon {
+                animation: icon-shaker 1s ease-in;
+            }
+        }
+    }
 }
 .testimonials__card-title {
     color: $text-dark;
     font-weight: 600;
     @extend %medium-text;
+
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.testimonials__card-icon {
+    background-image: url(../img/icons/heart-fill.svg);
+    width: 16px;
+    height: 16px;
+    background-position: center;
+    background-size: cover;
 }
 .testimonials-text {
     color: $text-dark;

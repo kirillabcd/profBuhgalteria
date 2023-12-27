@@ -5,9 +5,14 @@
 .how__cards {
     padding: 60px 0 0 0;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     grid-template-rows: 1fr 1fr;
     gap: 20px;
+    align-items: stretch;
+
+    @media screen and (max-width: $tablet-width) {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
 }
 
 .how__card {
@@ -19,12 +24,26 @@
     flex-direction: column;
     justify-content: center;
     gap: 20px;
+
+    transition: 0.3s ease-in;
+
+    @media (hover: hover) {
+        &:hover {
+            transform: scale(1.03);
+            .how__card-title .how__card-icon {
+                animation: icon-shaker 1s ease-in;
+            }
+        }
+    }
 }
 
 .how__card-title {
     color: $text-dark;
     @extend %h3;
     font-weight: 600;
+
+    display: flex;
+    gap: 8px;
 }
 
 .how__card-descr {

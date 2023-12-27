@@ -1,3 +1,8 @@
+.header {
+    height: 100px;
+    display: flex;
+}
+
 .header .container {
     display: flex;
     justify-content: space-between;
@@ -6,7 +11,7 @@
 
 .logo {
     width: 220px;
-    height: 100px;
+    height: 30px;
 
     background-image: url(../img/logo.svg);
     background-position: center;
@@ -14,6 +19,21 @@
     background-size: contain;
 }
 .header__nav {
+    @media screen and (max-width: $tablet-width) {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 90px;
+        padding: 100px 0 100px 0;
+        background-color: $body-color;
+        transform: translateX(-150%);
+
+        transition: 0.5s ease-in;
+
+        &.header__nav--active {
+            transform: translateX(0);
+        }
+    }
 }
 .header__menu-list {
     margin: 0 20px 0 20px;
@@ -22,6 +42,10 @@
     display: flex;
     align-items: center;
     gap: 20px;
+
+    @media screen and (max-width: $tablet-width) {
+        flex-direction: column;
+    }
 }
 
 .header__menu-item {
@@ -52,5 +76,59 @@
     > a {
         display: block;
         height: 26px;
+    }
+}
+
+.contacts-button {
+    @media screen and (max-width: $tablet-width) {
+        display: none;
+    }
+}
+
+.header__burger-button {
+    display: none;
+
+    @media screen and (max-width: $tablet-width) {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        justify-content: center;
+        align-items: center;
+
+        min-height: 40px;
+        min-width: 40px;
+
+        transition: 0.5s ease-in;
+
+        cursor: pointer;
+
+        span {
+            display: inline-block;
+            width: 40px;
+            height: 2px;
+            background-color: $border-light;
+
+            transition: 0.5s ease-in;
+        }
+
+        &.header__burger-button--active {
+            gap: 0px;
+            transform: rotate(360deg);
+            span:nth-child(1) {
+                transform: rotate(45deg);
+                margin: -2px;
+            }
+
+            span:nth-child(2) {
+                transform: scale(0);
+                transform-origin: right;
+            }
+
+            span:nth-child(3) {
+                transform: rotate(-45deg);
+                margin: -2px;
+            }
+        }
     }
 }

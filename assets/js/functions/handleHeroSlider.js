@@ -2,6 +2,7 @@ const sliderRow = document.querySelector('.hero__cards')
 const slides = document.querySelectorAll('.hero__card')
 let sliderCounter = 0
 let interval
+let intervalDuration = 3000
 const slideWidth = () => document.querySelectorAll('.hero__card')[0].offsetWidth
 
 export const handleHeroSlider = () => {
@@ -37,12 +38,15 @@ const restartSlider = () => {
 }
 
 const startSliderInterval = () => {
+    if (window.innerWidth <= 768) {
+        intervalDuration = 6000
+    }
     interval = setInterval(() => {
         mooveSlider()
         if (sliderCounter === 6) {
             restartSlider()
         }
-    }, 3000)
+    }, intervalDuration)
 }
 
 const pauseSlider = () => {

@@ -1,5 +1,5 @@
 .about {
-    padding: 100px 0 100px 0;
+    padding: 100px 0 0 0;
 }
 .h2-title {
     @extend %h2;
@@ -27,6 +27,7 @@
 }
 
 .about__image-container {
+    position: relative;
     border-radius: 40px;
     overflow: hidden;
     background-color: $cards-color-second;
@@ -41,6 +42,8 @@
     }
 
     p {
+        position: relative;
+        z-index: 2;
         padding: 40px 60px 60px 60px;
         @extend %h3;
         color: $text-dark;
@@ -52,6 +55,20 @@
         @media screen and (max-width: $tablet-width) {
             font-size: $h3-size;
         }
+    }
+
+    .decor {
+        position: absolute;
+        background-image: url(../img/cards3D/Torus_Concentric_Standing_1_0001.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        min-width: 500px;
+        min-height: 500px;
+
+        right: -150px;
+        bottom: -100px;
     }
 
     @media (hover: hover) {

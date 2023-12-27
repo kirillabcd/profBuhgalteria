@@ -9,6 +9,8 @@ import {
 
 import { handleCalculator } from './functions/handleCalculator.js'
 
+import { handleBurger, burgerButton } from './functions/handleBurger.js'
+
 handleHeroSlider()
 
 const linkRangeAndNumberInputs = () => {
@@ -21,3 +23,5 @@ const linkRangeAndNumberInputs = () => {
 linkRangeAndNumberInputs()
 
 handleCalculator()
+
+burgerButton.addEventListener('click', () => handleBurger())

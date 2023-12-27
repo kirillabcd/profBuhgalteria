@@ -26,10 +26,15 @@
                         </li>
                     </ul>
                 </nav>
-                <button class="button">
+                <button class="button contacts-button">
                     <div class="button-text">Контакты</div>
                     <div class="button-icon"></div>
                 </button>
+                <div class="header__burger-button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </header>
 
@@ -142,6 +147,8 @@
                                     заниматься бизнесом и мы успешно реализуем ее на протяжении
                                     более 10 лет
                                 </p>
+
+                                <div class="decor"></div>
                             </div>
 
                             <div class="about__image-container about__image-container-s">
@@ -158,27 +165,52 @@
                     </h2>
                     <div class="how__cards">
                         <div class="how__card">
-                            <div class="how__card-title">Команда вместо штатного бухгалтера</div>
+                            <div class="how__card-title">
+                                <img
+                                    class="how__card-icon"
+                                    alt="icon"
+                                    src="./assets/img/icons/tools.svg"
+                                />
+                                Команда вместо штатного бухгалтера
+                            </div>
                             <div class="how__card-descr">
                                 Заменим бухгалтера, кадровика, юриста и налогового консультанта
                             </div>
                         </div>
                         <div class="how__card">
-                            <div class="how__card-title">Бухгалтерский учет без ошибок</div>
+                            <div class="how__card-title">
+                                <img
+                                    class="how__card-icon"
+                                    alt="icon"
+                                    src="./assets/img/icons/piggy.svg"
+                                />Бухгалтерский учет без ошибок
+                            </div>
                             <div class="how__card-descr">
                                 Минимизируем налоговые риски, защитим от штрафов и переплат
                             </div>
                         </div>
 
                         <div class="how__card">
-                            <div class="how__card-title">Освободим ресурсы для бизнеса</div>
+                            <div class="how__card-title">
+                                <img
+                                    class="how__card-icon"
+                                    alt="icon"
+                                    src="./assets/img/icons/rocket.svg"
+                                />Освободим ресурсы для бизнеса
+                            </div>
                             <div class="how__card-descr">
                                 Сократим затраты на ведение учёта и позволим сосредоточиться на
                                 главном
                             </div>
                         </div>
                         <div class="how__card">
-                            <div class="how__card-title">Будем рядом</div>
+                            <div class="how__card-title">
+                                <img
+                                    class="how__card-icon"
+                                    alt="icon"
+                                    src="./assets/img/icons/hearts.svg"
+                                />Будем рядом
+                            </div>
                             <div class="how__card-descr">
                                 Не уйдем в отпуск или на больничный в разгар отчетного периода,
                                 всегда сможем оказать помощь
@@ -305,34 +337,33 @@
                     <div class="testimonials__cards">
                         <div class="testimonials__card">
                             <div class="testimonials__card-title">
+                                <div class="testimonials__card-icon"></div>
                                 Алексей Г - ООО "Пчелы и Мед"
                             </div>
                             <div class="testimonials-text">
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                                 Repudiandae impedit est maxime temporibus, quidem eligendi? Quas,
                                 officia atque consequuntur sint eos rerum maiores animi laborum ex
-                                tenetur earum deleniti sunt! Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Autem veniam assumenda doloribus quibusdam libero
-                                dicta impedit asperiores consequuntur, sapiente velit atque totam
-                                facilis exercitationem numquam nostrum soluta harum! Consequuntur,
-                                omnis.
+                                tenetur earum deleniti sunt!
                             </div>
                         </div>
                         <div class="testimonials__card">
-                            <div class="testimonials__card-title">Марина Д - ЗАО "КрайСнаб"</div>
+                            <div class="testimonials__card-title">
+                                <div class="testimonials__card-icon"></div>
+                                Марина Д - ЗАО "КрайСнаб"
+                            </div>
                             <div class="testimonials-text">
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                                 Repudiandae impedit est maxime temporibus, quidem eligendi? Quas,
                                 officia atque consequuntur sint eos rerum maiores animi laborum ex
-                                tenetur earum deleniti sunt! Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Autem veniam assumenda doloribus quibusdam libero
-                                dicta impedit asperiores consequuntur, sapiente velit atque totam
-                                facilis exercitationem numquam nostrum soluta harum! Consequuntur,
-                                omnis.
+                                tenetur earum deleniti sunt!
                             </div>
                         </div>
                         <div class="testimonials__card">
-                            <div class="testimonials__card-title">Олег Ж - ИП "Олег"</div>
+                            <div class="testimonials__card-title">
+                                <div class="testimonials__card-icon"></div>
+                                Олег Ж - ИП "Олег"
+                            </div>
                             <div class="testimonials-text">
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                                 Repudiandae impedit est maxime temporibus, quidem eligendi? Quas,
@@ -343,6 +374,47 @@
                     </div>
                 </section>
             </main>
+            <footer class="footer">
+                <div class="footer__column">
+                    <div class="logo"></div>
+                    <ul class="contacts">
+                        <li class="contacts-item">
+                            <img
+                                src="./assets/img/icons/location.svg"
+                                alt="icon"
+                                class="contacts__icon"
+                            />
+                            г. Хабаровск, Серышева 22, офис 214
+                        </li>
+                        <li class="contacts-item">
+                            <img
+                                src="./assets/img/icons/call.svg"
+                                alt="icon"
+                                class="contacts__icon"
+                            />
+                            <a href="tel:+74212201033">+7 (4212) 20-10-33</a>
+                        </li>
+                        <li class="contacts-item">
+                            <img
+                                src="./assets/img/icons/email.svg"
+                                alt="icon"
+                                class="contacts__icon"
+                            />
+                            <a href="mailto:info@profb.pro">info@profb.pro</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <p>Бухгалтерские услуги в Хабаровске</p>
+                    <ul class="footer__nav">
+                        <li class="footer__nav-item"><a href="">О нас</a></li>
+                        <li class="footer__nav-item"><a href="">Преимущества</a></li>
+                        <li class="footer__nav-item"><a href="">Расчет стоимости</a></li>
+                        <li class="footer__nav-item"><a href="">Отзывы</a></li>
+                        <li class="footer__nav-item"><a href="">Оставить заявку</a></li>
+                    </ul>
+                </div>
+            </footer>
         </div>
     </body>
     <script src="./assets/js/app.js" type="module"></script>
