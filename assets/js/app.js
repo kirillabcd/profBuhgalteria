@@ -17,6 +17,15 @@ import {
     insertContacts,
 } from './functions/handleBurger.js'
 
+import {
+    modal,
+    openModal,
+    closeModal,
+    heroButton,
+    calcButton,
+    modalCloseBtn,
+} from './functions/handleModal.js'
+
 handleHeroSlider()
 
 const linkRangeAndNumberInputs = () => {
@@ -35,3 +44,13 @@ insertContacts()
 burgerButton.addEventListener('click', () => handleBurger())
 
 navLinks().forEach((link) => link.addEventListener('click', () => closeBurgerMenuOnLink()))
+
+heroButton.addEventListener('click', () => openModal())
+calcButton.addEventListener('click', () => openModal())
+
+modalCloseBtn.addEventListener('click', () => closeModal())
+modal.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        closeModal()
+    }
+})

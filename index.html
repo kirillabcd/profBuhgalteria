@@ -7,6 +7,32 @@
         <title>ПрофБухгалтерия</title>
     </head>
     <body>
+        <!-- MODAL -->
+        <div class="modal">
+            <div class="modal__modal-body">
+                <div class="modal__close-button">
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="modal__title">
+                    Просто заполните форму<br />
+                    и мы перезвоним Вам
+                </div>
+                <form action="submit" class="modal__form">
+                    <input type="text" class="modal__input" placeholder="Имя" />
+                    <input
+                        type="number"
+                        class="modal__input"
+                        placeholder="Номер телефона"
+                        required
+                    />
+                    <input type="email" class="modal__input" placeholder="Email" />
+                    <button type="submit" class="modal__button">Отправить</button>
+                </form>
+            </div>
+        </div>
+        <!-- END MODAL -->
+
         <header class="header">
             <div class="container">
                 <div class="logo"></div>
@@ -53,7 +79,9 @@
                     </div>
 
                     <div class="hero__buttons-wrapper">
-                        <button class="button button-accent">Оставить заявку</button>
+                        <button class="button button-accent hero-button-callback">
+                            Оставить заявку
+                        </button>
                         <form action="#calculator">
                             <button class="button button-empty button-empty--hero">
                                 Рассчитать стоимость
@@ -337,7 +365,9 @@
                             <div class="form-title">Итоговая стоимость в месяц</div>
                             <div class="price__price-warapper">
                                 <div class="price__price-value">50 000 ₽</div>
-                                <button class="button button-accent">Оставить заявку</button>
+                                <button class="button button-accent calculator-button-callback">
+                                    Оставить заявку
+                                </button>
                             </div>
                         </div>
                     </div>

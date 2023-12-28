@@ -1,0 +1,102 @@
+.modal {
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    height: 100dvh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $backdrop-color;
+
+    transform: scale(0);
+    opacity: 0;
+
+    transition: scale 0.01s ease-in, opacity 0.3s ease-in;
+}
+
+.modal--active {
+    transform: scale(1);
+    opacity: 1;
+}
+.modal__modal-body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    background-color: $backdrop-color;
+    padding: 60px 40px 40px 40px;
+    border-radius: 40px;
+}
+.modal__title {
+    text-align: center;
+    @extend %h3;
+}
+
+.modal__form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.modal__input {
+    padding: 10px 20px 10px 20px;
+    border-radius: 40px;
+    outline: none;
+    box-shadow: none;
+    border: none;
+
+    color: $text-dark;
+    @extend %clickable-els-text;
+}
+.accent-button {
+}
+.modal__button {
+    padding: 10px 20px 10px 20px;
+    @extend %clickable-els-text;
+    border: 1.5px solid $border-light;
+    border-radius: 40px;
+    background-color: $container-color;
+    color: $text-dark;
+}
+
+.modal__close-button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+
+    span {
+        display: inline-block;
+        width: 20px;
+        height: 2px;
+        background-color: $border-light;
+
+        transition: 0.3s ease-in;
+    }
+
+    span:nth-child(1) {
+        transform: rotate(45deg);
+    }
+
+    span:nth-child(2) {
+        transform: rotate(-45deg);
+        margin: -2px;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            span {
+                background-color: $accent-color;
+            }
+        }
+    }
+}
