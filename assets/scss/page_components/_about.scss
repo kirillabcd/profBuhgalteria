@@ -68,7 +68,7 @@
         background-repeat: no-repeat;
         background-size: cover;
 
-        transition: 0.3s ease-in;
+        transition: 2s ease-in;
 
         width: 500px;
         height: 500px;
@@ -84,7 +84,7 @@
         background-repeat: no-repeat;
         background-size: cover;
 
-        transition: 0.3s ease-in;
+        transition: 2s ease-in;
 
         width: 400px;
         height: 400px;
@@ -119,11 +119,11 @@
         @media (hover: hover) {
             &:hover {
                 .decor {
-                    transform: scale(0.8);
+                    transform: translateX(-100%) translateY(-10%) rotate(180deg) scale(0.8);
                 }
 
                 .decor-second {
-                    transform: scale(0.8);
+                    transform: translateX(100%) translateY(10%) rotate(180deg) scale(0.8);
                 }
             }
         }

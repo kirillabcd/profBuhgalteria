@@ -17,6 +17,10 @@
     @media screen and (max-width: $tablet-width) {
         font-size: $h1-m-size;
     }
+
+    @media screen and (max-width: $mobile-width) {
+        font-size: $h2-m-size;
+    }
 }
 
 .h3-title {
