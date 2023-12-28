@@ -55,6 +55,10 @@
         @media screen and (max-width: $tablet-width) {
             font-size: $h3-size;
         }
+
+        @media screen and (max-width: $mobile-width) {
+            font-size: $m-size;
+        }
     }
 
     .decor {
@@ -64,17 +68,63 @@
         background-repeat: no-repeat;
         background-size: cover;
 
-        min-width: 500px;
-        min-height: 500px;
+        transition: 0.3s ease-in;
+
+        width: 500px;
+        height: 500px;
 
         right: -150px;
         bottom: -100px;
+    }
+
+    .decor-second {
+        position: absolute;
+        background-image: url(../img/cards3D/Gon_3_Down_Standing0001.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        transition: 0.3s ease-in;
+
+        width: 400px;
+        height: 400px;
+
+        left: -80px;
+        top: -100px;
+
+        @media screen and (max-width: 1024px) {
+            display: none;
+        }
+
+        @media screen and (max-width: $tablet-width) {
+            display: block;
+        }
+
+        @media screen and (max-width: 600px) {
+            display: none;
+        }
     }
 
     @media (hover: hover) {
         &:hover {
             img {
                 transform: scale(0.9);
+            }
+        }
+    }
+}
+
+.about__text-container {
+    @media screen and (min-width: $desktop-width) {
+        @media (hover: hover) {
+            &:hover {
+                .decor {
+                    transform: scale(0.8);
+                }
+
+                .decor-second {
+                    transform: scale(0.8);
+                }
             }
         }
     }

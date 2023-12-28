@@ -117,6 +117,10 @@
         @media screen and (max-width: $tablet-width) {
             transform: scaleY(1);
         }
+
+        @media screen and (max-width: $mobile-width) {
+            display: none;
+        }
     }
 
     .hero__card-icon {
@@ -157,5 +161,11 @@
                 max-height: 60px;
             }
         }
+    }
+}
+
+.button-empty--hero {
+    @media screen and (max-width: $tablet-width) {
+        display: none;
     }
 }

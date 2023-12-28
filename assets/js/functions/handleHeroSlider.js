@@ -41,6 +41,11 @@ const startSliderInterval = () => {
     if (window.innerWidth <= 768) {
         intervalDuration = 6000
     }
+
+    if (window.innerWidth <= 425) {
+        intervalDuration = 3000
+    }
+
     interval = setInterval(() => {
         mooveSlider()
         if (sliderCounter === 6) {
