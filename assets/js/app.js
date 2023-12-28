@@ -14,6 +14,7 @@ import {
     burgerButton,
     navLinks,
     closeBurgerMenuOnLink,
+    insertContacts,
 } from './functions/handleBurger.js'
 
 handleHeroSlider()
@@ -29,6 +30,8 @@ linkRangeAndNumberInputs()
 
 handleCalculator()
 
+insertContacts()
+
 burgerButton.addEventListener('click', () => handleBurger())
 
-navLinks.forEach((link) => link.addEventListener('click', () => closeBurgerMenuOnLink()))
+navLinks().forEach((link) => link.addEventListener('click', () => closeBurgerMenuOnLink()))

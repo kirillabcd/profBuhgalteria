@@ -31,6 +31,7 @@
     border-radius: 40px;
     @extend %medium-text;
     color: $text-dark;
+    user-select: none;
     cursor: pointer;
 
     transition: 0.3s ease-in;

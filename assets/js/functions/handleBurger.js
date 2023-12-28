@@ -1,6 +1,6 @@
 export const burgerButton = document.querySelector('.header__burger-button')
 export const nav = document.querySelector('.header__nav')
-export const navLinks = document.querySelectorAll('.header__menu-item')
+export const navLinks = () => document.querySelectorAll('.header__menu-item')
 
 export const handleBurger = () => {
     burgerButton.classList.toggle('header__burger-button--active')
@@ -13,5 +13,18 @@ export const closeBurgerMenuOnLink = () => {
         burgerButton.classList.remove('header__burger-button--active')
         nav.classList.remove('header__nav--active')
         document.body.classList.remove('lock-scroll')
+    }
+}
+
+export const insertContacts = () => {
+    if (window.innerWidth <= 768) {
+        const menuItem = document.createElement('li')
+        menuItem.classList.add('header__menu-item')
+        const link = document.createElement('a')
+        link.href = '#contacts'
+        link.textContent = 'Контакты'
+        menuItem.append(link)
+        const lastLink = navLinks()[navLinks().length - 1]
+        lastLink.insertAdjacentElement('afterend', menuItem)
     }
 }
