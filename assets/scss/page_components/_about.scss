@@ -8,7 +8,12 @@
     @media screen and (max-width: $tablet-width) {
         font-size: $h2-m-size;
     }
+
+    @media screen and (max-width: $s-mobile-width) {
+        font-size: $h2-s-m-size;
+    }
 }
+
 .about__cards {
     padding: 60px 0 0 0;
     display: flex;
@@ -119,11 +124,11 @@
         @media (hover: hover) {
             &:hover {
                 .decor {
-                    transform: translateX(-100%) translateY(-10%) rotate(180deg) scale(0.8);
+                    transform: translateX(-100%) translateY(-30%) rotate(180deg) scale(0.8);
                 }
 
                 .decor-second {
-                    transform: translateX(100%) translateY(10%) rotate(180deg) scale(0.8);
+                    transform: translateX(110%) translateY(40%) rotate(215deg) scale(0.8);
                 }
             }
         }
